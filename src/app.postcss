@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Barlow&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply background-color text-color text-sm md:text-base;
+  }
+
+  p {
+    @apply paragraph-spacing;
+  }
+
+  a {
+    @apply link-color;
+    &:hover {
+      @apply border-b text-english_violet-600;
+    }
+  }
+}
+
+@layer components {
+  .heading {
+    @apply heading-color font-serif;
+  }
+
+  .markdown {
+    h2 {
+      @apply heading mb-2 text-lg md:mb-3 md:text-xl;
+    }
+    h3 {
+      @apply clear-both mb-1 mt-6 inline-block text-van_dyke-600;
+      text-transform: uppercase;
+    }
+    img {
+      @apply paragraph-spacing float-left mr-4 h-auto w-auto md:w-72;
+    }
+    ul {
+      @apply inline-block text-xs;
+      li {
+        @apply before:link-color ml-0.5 inline pl-2 before:mr-0.5 before:content-['•'];
+      }
+    }
+  }
+}
+
+@layer utilities {
+  .background-color {
+    @apply bg-champagne-500;
+  }
+
+  .text-color {
+    @apply text-eerie_black-500;
+  }
+
+  .heading-color {
+    @apply text-vermilion-400;
+  }
+
+  .link-color {
+    @apply text-air_force_blue-500;
+  }
+
+  .paragraph-spacing {
+    @apply mb-4;
+  }
+}
