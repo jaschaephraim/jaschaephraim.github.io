@@ -45,7 +45,7 @@
       </SidebarLink>
     </li>
     <li>
-      <SidebarLink href="/jaschaephraim-resume.pdf" newTab>Resume</SidebarLink>
+      <SidebarLink href="/jascha-ephraim-resume.pdf" newTab>Resume</SidebarLink>
     </li>
   </ul>
 
