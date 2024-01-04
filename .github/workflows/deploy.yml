@@ -27,7 +27,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: jaschaephraim.com
+          BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           pnpm run build
 
@@ -46,7 +46,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: https://jaschaephraim.com/
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy
