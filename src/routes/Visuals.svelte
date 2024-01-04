@@ -28,10 +28,10 @@
   />
 </div>
 
-<div class="fixed bottom-0 flex h-auto w-full justify-center md:-bottom-48">
+<div class="fixed -bottom-48 flex h-auto w-full justify-center">
   <div class="absolute bottom-[44%] right-[20%] -z-50 md:bottom-[36%]">
     <Sun
-      classString="w-[130px] md:w-[250px]"
+      classString="w-[110px] md:w-[250px]"
       color={colors.mustard[400]}
       strokeWidth={4}
     />

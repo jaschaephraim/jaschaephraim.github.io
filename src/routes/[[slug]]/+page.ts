@@ -6,6 +6,5 @@ export function load({ params }) {
   if (params.slug && !(params.slug in content)) {
     error(404, { message: 'Not Found' });
   }
-
-  return { markdown: content[params.slug ?? 'home'] };
+  return content[params.slug ?? 'home'];
 }

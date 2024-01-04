@@ -5,6 +5,7 @@ declare global {
     // interface Error {}
     // interface Locals {}
     interface PageData {
+      title: string;
       markdown: string;
     }
     // interface Platform {}
