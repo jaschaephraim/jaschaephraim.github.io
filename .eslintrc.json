@@ -62,6 +62,7 @@
       }
     ],
     "no-continue": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "svelte/no-at-html-tags": "off"
   }
 }

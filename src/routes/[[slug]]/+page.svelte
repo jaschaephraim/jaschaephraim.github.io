@@ -2,6 +2,7 @@
   import SvelteMarkdown from 'svelte-markdown';
 
   import { page } from '$app/stores';
+  import Html from '$lib/renderers/Html.svelte';
   import Link from '$lib/renderers/Link.svelte';
 </script>
 
@@ -11,4 +12,7 @@
   </title>
 </svelte:head>
 
-<SvelteMarkdown source={$page.data.markdown} renderers={{ link: Link }} />
+<SvelteMarkdown
+  source={$page.data.markdown}
+  renderers={{ html: Html, link: Link }}
+/>

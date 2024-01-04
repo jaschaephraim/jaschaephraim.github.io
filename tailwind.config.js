@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const screens = require('./src/lib/breakpoints.json');
-const colors = require('./src/lib/palette.json');
+const screens = require('./src/lib/config/breakpoints.json');
+const colors = require('./src/lib/config/palette.json');
 
 /** @type {import('tailwindcss').Config} */
 export default {

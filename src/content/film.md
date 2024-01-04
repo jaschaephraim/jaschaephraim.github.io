@@ -11,7 +11,6 @@ In 2008 with assistance from the San Francisco Film Foundation I wrote, directed
   frameborder="0"
   allow="autoplay; fullscreen; picture-in-picture"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 ### 3D Business Trip

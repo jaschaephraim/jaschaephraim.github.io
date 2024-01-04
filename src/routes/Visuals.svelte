@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import colors from '$lib/palette.json';
+  import colors from '$lib/config/palette.json';
   import Stars from './Stars.svelte';
   import Sun from './Sun.svelte';
 

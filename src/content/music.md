@@ -14,106 +14,96 @@ In 2009 I was fortunate and honored to write the score for Cary Cronenwett's gor
 For years I had an ensemble whose name and instrumentation changed frequently. At its largest it was a twelve-piece group including a concert harp. For quite a while it was a string quartet along with me and my singing partner Jessy Brown. Here are some videos of its various incarnations in reverse chronological order.
 
 <iframe
-  width="560"
-  height="315"
+  width="640"
+  height="360"
   src="https://www.youtube.com/embed/WVeRdm1NV_E"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
-  width="560"
-  height="315"
+  width="640"
+  height="360"
   src="https://www.youtube.com/embed/NHGhVwEnasc"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
-  width="560"
-  height="315"
+  width="640"
+  height="360"
   src="https://www.youtube.com/embed/ILDrEQ0FcK8"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
-  width="560"
-  height="315"
+  width="640"
+  height="360"
   src="https://www.youtube.com/embed/TiJbvh9_2uk"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
   src="https://player.vimeo.com/video/14710012"
-  width="560"
-  height="374"
+  width="640"
+  height="427"
   frameborder="0"
   allow="autoplay; fullscreen; picture-in-picture"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
-  width="560"
-  height="315"
+  width="640"
+  height="360"
   src="https://www.youtube.com/embed/qfF6oXuA0g8"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
   src="https://player.vimeo.com/video/14718202"
-  width="560"
-  height="374"
+  width="640"
+  height="427"
   frameborder="0"
   allow="autoplay; fullscreen; picture-in-picture"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
   src="https://player.vimeo.com/video/14710587"
-  width="560"
-  height="374"
+  width="640"
+  height="427"
   frameborder="0"
   allow="autoplay; fullscreen; picture-in-picture"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
   src="https://player.vimeo.com/video/14717212"
-  width="560"
-  height="374"
+  width="640"
+  height="427"
   frameborder="0"
   allow="autoplay; fullscreen; picture-in-picture"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
 
 <iframe
   src="https://player.vimeo.com/video/14710948"
-  width="560"
-  height="374"
+  width="640"
+  height="427"
   frameborder="0"
   allow="autoplay; fullscreen; picture-in-picture"
   allowfullscreen
-  class="paragraph-spacing"
 ></iframe>
