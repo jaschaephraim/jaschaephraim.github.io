@@ -4,27 +4,43 @@ I'm an experienced full-stack software engineer, with a particular interest in w
 
 ### Toolkit
 
-- [Website](https://toolkit.ai)
+- [Website](https://toolkit.ai/)
 
 One of the projects I worked on as a team member at Toolkit AI, Toolkit enables engaging with intuitive AI-powered workflows from a native Mac service. Currently waitlist access.
 
 ### Magnet
 
-- [Website](https://magnet.run)
+- [Website](https://magnet.run/)
 
 Another project I worked on at Toolkit AI, Magnet is a powerful platform for giving AI tools access to a full codebase from the browser.
 
 ### Pal
 
-- [Website](https://www.pal.ai)
+- [Website](https://www.pal.ai/)
 
 One of the earlier projects I worked on at Toolkit AI, Pal allows easy creation of AI domain experts. It's similar to OpenAI's Assistants API, but much more powerful and was created before that feature was released.
 
-### EMMA Market System Mapping Tool
+### Infuse
 
-- [GitHub](https://github.com/emma-toolkit/market-mapper)
+- [Website](https://infuse.us/)
 
-In 2016 my brother [Theo Ephraim](https://theoephraim.com/) and I developed the Market System Mapping Tool for the [EMMA Toolkit](https://www.emma-toolkit.org/). It's designed to be a simple browser-based market mapping and assessment tool for use in areas with unpredictable internet access.
+From 2019-2022 I worked as a Senior Software Engineer, Engineering Manager, and Director of Engineering at Infuse, a versatile agency based in San Francisco. There I had the opportunity to contribute to a variety of projects, including Ethereum DApps, payment processing, medical transportation dispatching, and several React Native applications for Clover point-of-sale devices.
+
+### Gems
+
+Before founding [Knot API](https://knotapi.com/), Rory and Kieran O'Reilly hired me to develop a microtask platform and a corresponding Ethereum token to act as its currency. It was a great experience to learn smart contract development with Solidity and to write the contract for a Dutch auction ICO.
+
+### Gifs.com
+
+- [Website](https://gifs.com/)
+
+In 2017 I worked on the team at Gifs.com to build an in-browser video editor for animated GIF creation and editing.
+
+### Cargomatic
+
+- [Website](https://cargomatic.com/)
+
+My first fulltime job as part of an engineering department was at Cargomatic, developers of innovative last-mile shipping software. I got to work on a variety of interesting problems including real-time location tracking and complex real-world exception handling.
 
 ### Endless Rimworld
 
@@ -54,3 +70,15 @@ Middleware for the [Redux](https://redux.js.org/) state manager that enforces ac
 - [GitHub](https://github.com/infuse-us/react-native-headless-work-manager)
 
 Originally developed for React Native projects at [Infuse](https://infuse.us), this module enables the use of Android's WorkManger to schedule execution of HeadlessJS tasks. Once installed, both the scheduling and definition of tasks can be done entirely in JavaScript.
+
+### EMMA Market System Mapping Tool
+
+- [GitHub](https://github.com/emma-toolkit/market-mapper)
+
+In 2016 my brother [Theo Ephraim](https://theoephraim.com/) and I developed the Market System Mapping Tool for the [EMMA Toolkit](https://www.emma-toolkit.org/). It's designed to be a simple browser-based market mapping and assessment tool for use in areas with unpredictable internet access.
+
+### DNet
+
+- [GitHub](https://github.com/jaschaephraim/dnet)
+
+An undergraduate project that I was particularly proud of, DNet is a Beyesian decision network application written in Java. It can perform probabilistic inference exactly by enumeration or approximately by Gibbs sampling. Thorough documentation and several examples are provided.
