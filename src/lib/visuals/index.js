@@ -227,7 +227,7 @@ ${e}`);
               g /= 2;
               break;
             case te:
-              g /= 6;
+              g /= 3;
               break;
             default:
               throw new Error(`unexpected mode ${t}`);
