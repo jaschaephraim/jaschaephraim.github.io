@@ -1,11 +1,11 @@
 var O = Object.defineProperty;
 var M = (o, e, n) => e in o ? O(o, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : o[e] = n;
-var d = (o, e, n) => (M(o, typeof e != "symbol" ? e + "" : e, n), n);
+var v = (o, e, n) => (M(o, typeof e != "symbol" ? e + "" : e, n), n);
 var U = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
-function G(o) {
+function V(o) {
   return o && o.__esModule && Object.prototype.hasOwnProperty.call(o, "default") ? o.default : o;
 }
-var L = { exports: {} };
+var N = { exports: {} };
 (function(o, e) {
   (function(n, t) {
     o.exports = t();
@@ -15,15 +15,15 @@ var L = { exports: {} };
         return r.appendChild(f.dom), f;
       }
       function i(f) {
-        for (var v = 0; v < r.children.length; v++)
-          r.children[v].style.display = v === f ? "block" : "none";
+        for (var d = 0; d < r.children.length; d++)
+          r.children[d].style.display = d === f ? "block" : "none";
         s = f;
       }
       var s = 0, r = document.createElement("div");
       r.style.cssText = "position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000", r.addEventListener("click", function(f) {
         f.preventDefault(), i(++s % r.children.length);
       }, !1);
-      var m = (performance || Date).now(), l = m, a = 0, y = t(new n.Panel("FPS", "#0ff", "#002")), z = t(new n.Panel("MS", "#0f0", "#020"));
+      var m = (performance || Date).now(), l = m, a = 0, p = t(new n.Panel("FPS", "#0ff", "#002")), z = t(new n.Panel("MS", "#0f0", "#020"));
       if (self.performance && self.performance.memory)
         var _ = t(new n.Panel("MB", "#f08", "#201"));
       return i(0), { REVISION: 16, dom: r, addPanel: t, showPanel: i, begin: function() {
@@ -31,9 +31,9 @@ var L = { exports: {} };
       }, end: function() {
         a++;
         var f = (performance || Date).now();
-        if (z.update(f - m, 200), f > l + 1e3 && (y.update(1e3 * a / (f - l), 100), l = f, a = 0, _)) {
-          var v = performance.memory;
-          _.update(v.usedJSHeapSize / 1048576, v.jsHeapSizeLimit / 1048576);
+        if (z.update(f - m, 200), f > l + 1e3 && (p.update(1e3 * a / (f - l), 100), l = f, a = 0, _)) {
+          var d = performance.memory;
+          _.update(d.usedJSHeapSize / 1048576, d.jsHeapSizeLimit / 1048576);
         }
         return f;
       }, update: function() {
@@ -41,32 +41,32 @@ var L = { exports: {} };
       }, domElement: r, setMode: i };
     };
     return n.Panel = function(t, i, s) {
-      var r = 1 / 0, m = 0, l = Math.round, a = l(window.devicePixelRatio || 1), y = 80 * a, z = 48 * a, _ = 3 * a, f = 2 * a, v = 3 * a, g = 15 * a, p = 74 * a, h = 30 * a, x = document.createElement("canvas");
-      x.width = y, x.height = z, x.style.cssText = "width:80px;height:48px";
-      var c = x.getContext("2d");
-      return c.font = "bold " + 9 * a + "px Helvetica,Arial,sans-serif", c.textBaseline = "top", c.fillStyle = s, c.fillRect(0, 0, y, z), c.fillStyle = i, c.fillText(t, _, f), c.fillRect(v, g, p, h), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(v, g, p, h), { dom: x, update: function(S, D) {
-        r = Math.min(r, S), m = Math.max(m, S), c.fillStyle = s, c.globalAlpha = 1, c.fillRect(0, 0, y, g), c.fillStyle = i, c.fillText(l(S) + " " + t + " (" + l(r) + "-" + l(m) + ")", _, f), c.drawImage(x, v + a, g, p - a, h, v, g, p - a, h), c.fillRect(v + p - a, g, a, h), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(v + p - a, g, a, l((1 - S / D) * h));
+      var r = 1 / 0, m = 0, l = Math.round, a = l(window.devicePixelRatio || 1), p = 80 * a, z = 48 * a, _ = 3 * a, f = 2 * a, d = 3 * a, g = 15 * a, x = 74 * a, h = 30 * a, b = document.createElement("canvas");
+      b.width = p, b.height = z, b.style.cssText = "width:80px;height:48px";
+      var c = b.getContext("2d");
+      return c.font = "bold " + 9 * a + "px Helvetica,Arial,sans-serif", c.textBaseline = "top", c.fillStyle = s, c.fillRect(0, 0, p, z), c.fillStyle = i, c.fillText(t, _, f), c.fillRect(d, g, x, h), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(d, g, x, h), { dom: b, update: function(S, L) {
+        r = Math.min(r, S), m = Math.max(m, S), c.fillStyle = s, c.globalAlpha = 1, c.fillRect(0, 0, p, g), c.fillStyle = i, c.fillText(l(S) + " " + t + " (" + l(r) + "-" + l(m) + ")", _, f), c.drawImage(b, d + a, g, x - a, h, d, g, x - a, h), c.fillRect(d + x - a, g, a, h), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(d + x - a, g, a, l((1 - S / L) * h));
       } };
     }, n;
   });
-})(L);
-var q = L.exports;
-const V = /* @__PURE__ */ G(q), {
+})(N);
+var G = N.exports;
+const q = /* @__PURE__ */ V(G), {
   ARRAY_BUFFER: T,
   COLOR_ATTACHMENT0: k,
   COMPILE_STATUS: $,
   ELEMENT_ARRAY_BUFFER: H,
   FLOAT: A,
   FLOAT_MAT4: j,
-  FLOAT_VEC4: Y,
+  FLOAT_VEC4: W,
   FRAMEBUFFER: w,
-  FRAMEBUFFER_COMPLETE: X,
-  INT: W,
-  LINEAR: F,
+  FRAMEBUFFER_COMPLETE: Y,
+  INT: X,
+  LINEAR: I,
   LINK_STATUS: J,
-  RGBA: I,
+  RGBA: F,
   STATIC_DRAW: K,
-  TEXTURE_2D: b,
+  TEXTURE_2D: y,
   TEXTURE_MAG_FILTER: Z,
   TEXTURE_MIN_FILTER: Q,
   TEXTURE0: ee,
@@ -75,14 +75,14 @@ const V = /* @__PURE__ */ G(q), {
 } = WebGL2RenderingContext;
 class ie {
   constructor({ webgl: e, config: n, dimensions: { width: t, height: i } }) {
-    d(this, "webgl");
-    d(this, "config");
-    d(this, "program");
-    d(this, "uniforms", {});
-    d(this, "buffers", {});
-    d(this, "texture", null);
-    d(this, "framebuffer", null);
-    d(this, "positionAttribute");
+    v(this, "webgl");
+    v(this, "config");
+    v(this, "program");
+    v(this, "uniforms", {});
+    v(this, "buffers", {});
+    v(this, "texture", null);
+    v(this, "framebuffer", null);
+    v(this, "positionAttribute");
     this.webgl = e, this.config = n;
     const s = this.webgl.createProgram();
     if (!s)
@@ -112,7 +112,7 @@ class ie {
     let t = 0;
     this.config.buffers.forEach((i) => {
       t = this.drawBuffer(i, t);
-    }), this.config.drawToFramebuffer && (this.webgl.bindFramebuffer(w, null), this.webgl.activeTexture(ee), this.webgl.bindTexture(b, this.texture));
+    }), this.config.drawToFramebuffer && (this.webgl.bindFramebuffer(w, null), this.webgl.activeTexture(ee), this.webgl.bindTexture(y, this.texture));
   }
   getUniform(e) {
     return this.uniforms[e] ?? null;
@@ -145,23 +145,23 @@ ${s}`);
     this.webgl.bindBuffer(n, i), this.webgl.bufferData(n, t, K), this.buffers[e] = i;
   }
   createFramebuffer(e, n) {
-    if (this.texture = this.webgl.createTexture(), this.webgl.bindTexture(b, this.texture), this.webgl.texParameteri(b, Q, F), this.webgl.texParameteri(b, Z, F), this.webgl.texImage2D(
-      b,
+    if (this.texture = this.webgl.createTexture(), this.webgl.bindTexture(y, this.texture), this.webgl.texParameteri(y, Q, I), this.webgl.texParameteri(y, Z, I), this.webgl.texImage2D(
+      y,
       0,
-      I,
+      F,
       e,
       n,
       0,
-      I,
+      F,
       ne,
       null
     ), this.framebuffer = this.webgl.createFramebuffer(), this.webgl.bindFramebuffer(w, this.framebuffer), this.webgl.framebufferTexture2D(
       w,
       k,
-      b,
+      y,
       this.texture,
       0
-    ), this.webgl.checkFramebufferStatus(w) !== X)
+    ), this.webgl.checkFramebufferStatus(w) !== Y)
       throw new Error("framebuffer is not complete");
     this.webgl.bindFramebuffer(w, null);
   }
@@ -179,10 +179,10 @@ ${e}`);
         case A:
           this.webgl.uniform1f(i, t);
           break;
-        case W:
+        case X:
           this.webgl.uniform1i(i, t);
           break;
-        case Y:
+        case W:
           this.webgl.uniform4f(i, t[0], t[1], t[2], t[3]);
           break;
         case j:
@@ -212,8 +212,9 @@ ${e}`);
     const m = this.getBuffer(e);
     this.webgl.bindBuffer(n, m);
     const l = this.getUniform("u_bufferIndex");
-    for (let a = 0; a < i; a++) {
-      switch (this.webgl.uniform1i(l, r), n) {
+    let a = r;
+    for (let p = 0; p < i; p++) {
+      switch (this.webgl.uniform1i(l, a), n) {
         case H:
           this.webgl.drawElements(t, s.length, te, 0);
           break;
@@ -225,9 +226,9 @@ ${e}`);
             `could not draw buffer ${e}, unexpected type ${n}`
           );
       }
-      r++;
+      a++;
     }
-    return r;
+    return a;
   }
 }
 const {
@@ -246,11 +247,11 @@ class le {
     dimensions: { width: i, height: s },
     stats: r
   }) {
-    d(this, "window");
-    d(this, "webgl");
-    d(this, "config");
-    d(this, "programs", []);
-    d(this, "stats");
+    v(this, "window");
+    v(this, "webgl");
+    v(this, "config");
+    v(this, "programs", []);
+    v(this, "stats");
     this.window = e, this.webgl = n, this.config = t, this.stats = r, this.webgl.enable(ae), this.webgl.enable(oe), this.webgl.blendFunc(fe, ce), this.linkPrograms(i, s);
   }
   run() {
@@ -280,7 +281,7 @@ class le {
     });
   }
 }
-var ve = `#version 300 es
+var de = `#version 300 es
 #extension GL_GOOGLE_include_directive : enable
 
 precision mediump float;
@@ -326,7 +327,7 @@ void main() {
     u_birdColor,
     u_birdColor
   )[u_bufferIndex];
-}`, de = `#version 300 es
+}`, ve = `#version 300 es
 #extension GL_GOOGLE_include_directive : enable
 
 precision mediump float;
@@ -642,6 +643,7 @@ const float noiseAmpB = 0.025;
 mat4 nextBirdDisplacements;
 const float birdScale = 0.01;
 const float birdSpeed = 0.0003;
+const float flapSpeed = 0.02;
 const vec3 birdDisplacementScale = vec3(0.4, 0.15, 0.14);
 const vec4 birdOffset = vec4(0.0, 0.2, -0.3, 1.0);
 const mat3 birdNoiseOffsets = mat3(
@@ -744,15 +746,36 @@ mat4 getBirdRotation(int birdIndex) {
   return getBirdRotationMatrix(rotations);
 }
 
-vec4 getVertexPosition(int birdIndex) {
+vec4 getWingTipPosition(int birdIndex) {
+  vec4 displacement = v_birdDisplacements[birdIndex];
+  vec4 flapPosition = a_position + (sin(flapSpeed * u_t) - 0.5) / 1.5;
+  return mix(
+    flapPosition,
+    a_position,
+    smoothstep(0.0, 0.5, (displacement.y - birdOffset.y) / birdDisplacementScale.y + 0.5)
+  );
+}
+
+vec4 getBirdVertexPosition(int birdIndex) {
+  return vec4[6](
+    a_position,
+    getWingTipPosition(birdIndex),
+    a_position,
+    a_position,
+    getWingTipPosition(birdIndex),
+    a_position
+  )[gl_VertexID];
+}
+
+vec4 getRotatedVertexForBird(int birdIndex) {
   mat4 rotation = getBirdRotation(birdIndex);
-  return rotation * a_position;
+  return rotation * getBirdVertexPosition(birdIndex);
 }
 
 mat4 getBirdVertexPositions() {
   mat4 vertices = mat4(
-    getVertexPosition(0),
-    getVertexPosition(1),
+    getRotatedVertexForBird(0),
+    getRotatedVertexForBird(1),
     vec4(0),
     vec4(0)
   ) * birdScale;
@@ -787,25 +810,25 @@ void main() {
 const {
   ARRAY_BUFFER: ue,
   ELEMENT_ARRAY_BUFFER: B,
-  FLOAT: E,
-  FLOAT_VEC4: R,
+  FLOAT: R,
+  FLOAT_VEC4: E,
   FRAGMENT_SHADER: me,
   INT: P,
-  LINES: ge,
-  TRIANGLES: N,
-  VERTEX_SHADER: pe
+  LINES: pe,
+  TRIANGLES: D,
+  VERTEX_SHADER: ge
 } = WebGL2RenderingContext, u = 100;
 function C(o) {
-  let e = parseInt(o.substring(1, 3), 16) / 255, n = parseInt(o.substring(3, 5), 16) / 255, t = parseInt(o.substring(5, 7), 16) / 255;
+  const e = parseInt(o.substring(1, 3), 16) / 255, n = parseInt(o.substring(3, 5), 16) / 255, t = parseInt(o.substring(5, 7), 16) / 255;
   return [e, n, t, 1];
 }
-function he() {
+function xe() {
   const o = u - 1, e = [];
   for (let n = 0; n < u * u; n++)
     n % u < o && (e.push(n), e.push(n + 1));
   return new Uint16Array(e);
 }
-function xe() {
+function he() {
   const o = u - 1, e = [];
   for (let n = 0; n < u * u; n++)
     if (n % u < o && Math.floor(n / u) < o) {
@@ -814,7 +837,7 @@ function xe() {
     }
   return new Uint16Array(e);
 }
-function we({
+function be({
   aspectRatio: o,
   fov: e,
   cameraHeight: n,
@@ -828,19 +851,19 @@ function we({
     shaders: [
       {
         name: "vertex",
-        type: pe,
-        source: de
+        type: ge,
+        source: ve
       },
       {
         name: "fragment",
         type: me,
-        source: ve
+        source: de
       }
     ],
     uniforms: [
       {
         name: "u_aspectRatio",
-        type: E,
+        type: R,
         value: o
       },
       {
@@ -855,37 +878,37 @@ function we({
       },
       {
         name: "u_t",
-        type: E,
+        type: R,
         value: 0
       },
       {
         name: "u_fov",
-        type: E,
+        type: R,
         value: e
       },
       {
         name: "u_cameraHeight",
-        type: E,
+        type: R,
         value: n
       },
       {
         name: "u_edgeColor",
-        type: R,
+        type: E,
         value: C(t)
       },
       {
         name: "u_faceColor",
-        type: R,
+        type: E,
         value: C(i)
       },
       {
         name: "u_birdColor",
-        type: R,
+        type: E,
         value: C(s)
       },
       {
         name: "u_shadowColor",
-        type: R,
+        type: E,
         value: C(r)
       }
     ],
@@ -893,21 +916,21 @@ function we({
       {
         name: "faces",
         type: B,
-        mode: N,
-        drawCount: 1,
-        values: xe()
-      },
-      {
-        name: "edges",
-        type: B,
-        mode: ge,
+        mode: D,
         drawCount: 1,
         values: he()
       },
       {
+        name: "edges",
+        type: B,
+        mode: pe,
+        drawCount: 1,
+        values: xe()
+      },
+      {
         name: "bird",
         type: ue,
-        mode: N,
+        mode: D,
         drawCount: 2,
         // prettier-ignore
         values: new Float32Array([
@@ -934,9 +957,9 @@ function we({
     ]
   };
 }
-function be(o) {
+function we(o) {
   return {
-    programs: [we(o)]
+    programs: [be(o)]
   };
 }
 function ye(o, e) {
@@ -947,14 +970,14 @@ function ze(o, e, n, t = !1) {
   var l;
   const i = ye(o, e);
   let s;
-  t && (s = new V(), (l = e.parentElement) == null || l.appendChild(s.dom));
+  t && (s = new q(), (l = e.parentElement) == null || l.appendChild(s.dom));
   const r = e.getContext("webgl2");
   if (!r)
     throw new Error("unable to get webgl context");
   new le({
     window: o,
     webgl: r,
-    config: be({
+    config: we({
       ...n,
       aspectRatio: i
     }),
