@@ -2,10 +2,10 @@ var O = Object.defineProperty;
 var M = (o, e, n) => e in o ? O(o, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : o[e] = n;
 var v = (o, e, n) => (M(o, typeof e != "symbol" ? e + "" : e, n), n);
 var U = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
-function V(o) {
+function G(o) {
   return o && o.__esModule && Object.prototype.hasOwnProperty.call(o, "default") ? o.default : o;
 }
-var N = { exports: {} };
+var D = { exports: {} };
 (function(o, e) {
   (function(n, t) {
     o.exports = t();
@@ -23,17 +23,17 @@ var N = { exports: {} };
       r.style.cssText = "position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000", r.addEventListener("click", function(f) {
         f.preventDefault(), i(++s % r.children.length);
       }, !1);
-      var m = (performance || Date).now(), l = m, a = 0, p = t(new n.Panel("FPS", "#0ff", "#002")), z = t(new n.Panel("MS", "#0f0", "#020"));
+      var m = (performance || Date).now(), l = m, a = 0, p = t(new n.Panel("FPS", "#0ff", "#002")), g = t(new n.Panel("MS", "#0f0", "#020"));
       if (self.performance && self.performance.memory)
-        var _ = t(new n.Panel("MB", "#f08", "#201"));
+        var z = t(new n.Panel("MB", "#f08", "#201"));
       return i(0), { REVISION: 16, dom: r, addPanel: t, showPanel: i, begin: function() {
         m = (performance || Date).now();
       }, end: function() {
         a++;
         var f = (performance || Date).now();
-        if (z.update(f - m, 200), f > l + 1e3 && (p.update(1e3 * a / (f - l), 100), l = f, a = 0, _)) {
+        if (g.update(f - m, 200), f > l + 1e3 && (p.update(1e3 * a / (f - l), 100), l = f, a = 0, z)) {
           var d = performance.memory;
-          _.update(d.usedJSHeapSize / 1048576, d.jsHeapSizeLimit / 1048576);
+          z.update(d.usedJSHeapSize / 1048576, d.jsHeapSizeLimit / 1048576);
         }
         return f;
       }, update: function() {
@@ -41,39 +41,41 @@ var N = { exports: {} };
       }, domElement: r, setMode: i };
     };
     return n.Panel = function(t, i, s) {
-      var r = 1 / 0, m = 0, l = Math.round, a = l(window.devicePixelRatio || 1), p = 80 * a, z = 48 * a, _ = 3 * a, f = 2 * a, d = 3 * a, g = 15 * a, x = 74 * a, h = 30 * a, b = document.createElement("canvas");
-      b.width = p, b.height = z, b.style.cssText = "width:80px;height:48px";
+      var r = 1 / 0, m = 0, l = Math.round, a = l(window.devicePixelRatio || 1), p = 80 * a, g = 48 * a, z = 3 * a, f = 2 * a, d = 3 * a, x = 15 * a, h = 74 * a, w = 30 * a, b = document.createElement("canvas");
+      b.width = p, b.height = g, b.style.cssText = "width:80px;height:48px";
       var c = b.getContext("2d");
-      return c.font = "bold " + 9 * a + "px Helvetica,Arial,sans-serif", c.textBaseline = "top", c.fillStyle = s, c.fillRect(0, 0, p, z), c.fillStyle = i, c.fillText(t, _, f), c.fillRect(d, g, x, h), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(d, g, x, h), { dom: b, update: function(S, L) {
-        r = Math.min(r, S), m = Math.max(m, S), c.fillStyle = s, c.globalAlpha = 1, c.fillRect(0, 0, p, g), c.fillStyle = i, c.fillText(l(S) + " " + t + " (" + l(r) + "-" + l(m) + ")", _, f), c.drawImage(b, d + a, g, x - a, h, d, g, x - a, h), c.fillRect(d + x - a, g, a, h), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(d + x - a, g, a, l((1 - S / L) * h));
+      return c.font = "bold " + 9 * a + "px Helvetica,Arial,sans-serif", c.textBaseline = "top", c.fillStyle = s, c.fillRect(0, 0, p, g), c.fillStyle = i, c.fillText(t, z, f), c.fillRect(d, x, h, w), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(d, x, h, w), { dom: b, update: function(S, L) {
+        r = Math.min(r, S), m = Math.max(m, S), c.fillStyle = s, c.globalAlpha = 1, c.fillRect(0, 0, p, x), c.fillStyle = i, c.fillText(l(S) + " " + t + " (" + l(r) + "-" + l(m) + ")", z, f), c.drawImage(b, d + a, x, h - a, w, d, x, h - a, w), c.fillRect(d + h - a, x, a, w), c.fillStyle = s, c.globalAlpha = 0.9, c.fillRect(d + h - a, x, a, l((1 - S / L) * w));
       } };
     }, n;
   });
-})(N);
-var G = N.exports;
-const q = /* @__PURE__ */ V(G), {
-  ARRAY_BUFFER: T,
+})(D);
+var V = D.exports;
+const q = /* @__PURE__ */ G(V), {
+  ARRAY_BUFFER: C,
   COLOR_ATTACHMENT0: k,
   COMPILE_STATUS: $,
   ELEMENT_ARRAY_BUFFER: H,
   FLOAT: A,
   FLOAT_MAT4: j,
   FLOAT_VEC4: W,
-  FRAMEBUFFER: w,
+  FRAMEBUFFER: y,
   FRAMEBUFFER_COMPLETE: Y,
   INT: X,
   LINEAR: I,
   LINK_STATUS: J,
+  POINTS: K,
   RGBA: F,
-  STATIC_DRAW: K,
-  TEXTURE_2D: y,
-  TEXTURE_MAG_FILTER: Z,
-  TEXTURE_MIN_FILTER: Q,
-  TEXTURE0: ee,
-  UNSIGNED_BYTE: ne,
-  UNSIGNED_SHORT: te
+  STATIC_DRAW: Z,
+  TEXTURE_2D: _,
+  TEXTURE_MAG_FILTER: Q,
+  TEXTURE_MIN_FILTER: ee,
+  TEXTURE0: ne,
+  TRIANGLES: te,
+  UNSIGNED_BYTE: ie,
+  UNSIGNED_SHORT: oe
 } = WebGL2RenderingContext;
-class ie {
+class re {
   constructor({ webgl: e, config: n, dimensions: { width: t, height: i } }) {
     v(this, "webgl");
     v(this, "config");
@@ -104,7 +106,7 @@ class ie {
     ), this.config.buffers.forEach((e) => this.setBuffer(e));
   }
   draw(e) {
-    this.config.drawToFramebuffer && (this.webgl.bindFramebuffer(w, this.framebuffer), this.webgl.clear(
+    this.config.drawToFramebuffer && (this.webgl.bindFramebuffer(y, this.framebuffer), this.webgl.clear(
       this.webgl.COLOR_BUFFER_BIT | this.webgl.DEPTH_BUFFER_BIT
     ));
     const n = this.getUniform("u_t");
@@ -112,7 +114,7 @@ class ie {
     let t = 0;
     this.config.buffers.forEach((i) => {
       t = this.drawBuffer(i, t);
-    }), this.config.drawToFramebuffer && (this.webgl.bindFramebuffer(w, null), this.webgl.activeTexture(ee), this.webgl.bindTexture(y, this.texture));
+    }), this.config.drawToFramebuffer && (this.webgl.bindFramebuffer(y, null), this.webgl.activeTexture(ne), this.webgl.bindTexture(_, this.texture));
   }
   getUniform(e) {
     return this.uniforms[e] ?? null;
@@ -142,28 +144,28 @@ ${s}`);
     const i = this.webgl.createBuffer();
     if (!i)
       throw new Error(`unable to create buffer ${e}`);
-    this.webgl.bindBuffer(n, i), this.webgl.bufferData(n, t, K), this.buffers[e] = i;
+    this.webgl.bindBuffer(n, i), this.webgl.bufferData(n, t, Z), this.buffers[e] = i;
   }
   createFramebuffer(e, n) {
-    if (this.texture = this.webgl.createTexture(), this.webgl.bindTexture(y, this.texture), this.webgl.texParameteri(y, Q, I), this.webgl.texParameteri(y, Z, I), this.webgl.texImage2D(
-      y,
+    if (this.texture = this.webgl.createTexture(), this.webgl.bindTexture(_, this.texture), this.webgl.texParameteri(_, ee, I), this.webgl.texParameteri(_, Q, I), this.webgl.texImage2D(
+      _,
       0,
       F,
       e,
       n,
       0,
       F,
-      ne,
+      ie,
       null
-    ), this.framebuffer = this.webgl.createFramebuffer(), this.webgl.bindFramebuffer(w, this.framebuffer), this.webgl.framebufferTexture2D(
-      w,
-      k,
+    ), this.framebuffer = this.webgl.createFramebuffer(), this.webgl.bindFramebuffer(y, this.framebuffer), this.webgl.framebufferTexture2D(
       y,
+      k,
+      _,
       this.texture,
       0
-    ), this.webgl.checkFramebufferStatus(w) !== Y)
+    ), this.webgl.checkFramebufferStatus(y) !== Y)
       throw new Error("framebuffer is not complete");
-    this.webgl.bindFramebuffer(w, null);
+    this.webgl.bindFramebuffer(y, null);
   }
   linkProgram() {
     if (this.webgl.linkProgram(this.program), !this.webgl.getProgramParameter(this.program, J)) {
@@ -196,7 +198,7 @@ ${e}`);
   }
   setBuffer({ name: e, type: n }) {
     const t = this.getBuffer(e);
-    this.webgl.bindBuffer(n, t), n === T && this.enableVertexAttribute();
+    this.webgl.bindBuffer(n, t), n === C && this.enableVertexAttribute();
   }
   enableVertexAttribute() {
     this.webgl.vertexAttribPointer(
@@ -216,11 +218,23 @@ ${e}`);
     for (let p = 0; p < i; p++) {
       switch (this.webgl.uniform1i(l, a), n) {
         case H:
-          this.webgl.drawElements(t, s.length, te, 0);
+          this.webgl.drawElements(t, s.length, oe, 0);
           break;
-        case T:
-          this.webgl.drawArrays(t, 0, s.length / 3);
+        case C: {
+          let g = s.length;
+          switch (t) {
+            case K:
+              g /= 2;
+              break;
+            case te:
+              g /= 6;
+              break;
+            default:
+              throw new Error(`unexpected mode ${t}`);
+          }
+          this.webgl.drawArrays(t, 0, g);
           break;
+        }
         default:
           throw new Error(
             `could not draw buffer ${e}, unexpected type ${n}`
@@ -232,14 +246,14 @@ ${e}`);
   }
 }
 const {
-  BLEND: oe,
-  COLOR_BUFFER_BIT: re,
-  DEPTH_BUFFER_BIT: se,
-  DEPTH_TEST: ae,
-  ONE_MINUS_SRC_ALPHA: ce,
-  SRC_ALPHA: fe
+  BLEND: se,
+  COLOR_BUFFER_BIT: ae,
+  DEPTH_BUFFER_BIT: ce,
+  DEPTH_TEST: fe,
+  ONE_MINUS_SRC_ALPHA: le,
+  SRC_ALPHA: de
 } = WebGL2RenderingContext;
-class le {
+class ve {
   constructor({
     window: e,
     webgl: n,
@@ -252,7 +266,7 @@ class le {
     v(this, "config");
     v(this, "programs", []);
     v(this, "stats");
-    this.window = e, this.webgl = n, this.config = t, this.stats = r, this.webgl.enable(ae), this.webgl.enable(oe), this.webgl.blendFunc(fe, ce), this.linkPrograms(i, s);
+    this.window = e, this.webgl = n, this.config = t, this.stats = r, this.webgl.enable(fe), this.webgl.enable(se), this.webgl.blendFunc(de, le), this.linkPrograms(i, s);
   }
   run() {
     this.programs.length === 1 && this.programs[0].use();
@@ -264,7 +278,7 @@ class le {
   }
   linkPrograms(e, n) {
     this.config.programs.forEach((t) => {
-      const i = new ie({
+      const i = new re({
         webgl: this.webgl,
         config: t,
         dimensions: { width: e, height: n }
@@ -273,7 +287,7 @@ class le {
     });
   }
   clear() {
-    this.webgl.clearColor(0, 0, 0, 0), this.webgl.clear(re | se);
+    this.webgl.clearColor(0, 0, 0, 0), this.webgl.clear(ae | ce);
   }
   renderFrame(e) {
     this.clear(), this.programs.forEach((n) => {
@@ -281,7 +295,7 @@ class le {
     });
   }
 }
-var de = `#version 300 es
+var ue = `#version 300 es
 #extension GL_GOOGLE_include_directive : enable
 
 precision mediump float;
@@ -327,7 +341,7 @@ void main() {
     u_birdColor,
     u_birdColor
   )[u_bufferIndex];
-}`, ve = `#version 300 es
+}`, me = `#version 300 es
 #extension GL_GOOGLE_include_directive : enable
 
 precision mediump float;
@@ -808,27 +822,27 @@ void main() {
   v_uv = position.xz;
 }`;
 const {
-  ARRAY_BUFFER: ue,
+  ARRAY_BUFFER: pe,
   ELEMENT_ARRAY_BUFFER: B,
-  FLOAT: R,
-  FLOAT_VEC4: E,
-  FRAGMENT_SHADER: me,
+  FLOAT: E,
+  FLOAT_VEC4: R,
+  FRAGMENT_SHADER: ge,
   INT: P,
-  LINES: pe,
-  TRIANGLES: D,
-  VERTEX_SHADER: ge
+  LINES: xe,
+  TRIANGLES: N,
+  VERTEX_SHADER: he
 } = WebGL2RenderingContext, u = 100;
-function C(o) {
+function T(o) {
   const e = parseInt(o.substring(1, 3), 16) / 255, n = parseInt(o.substring(3, 5), 16) / 255, t = parseInt(o.substring(5, 7), 16) / 255;
   return [e, n, t, 1];
 }
-function xe() {
+function we() {
   const o = u - 1, e = [];
   for (let n = 0; n < u * u; n++)
     n % u < o && (e.push(n), e.push(n + 1));
   return new Uint16Array(e);
 }
-function he() {
+function be() {
   const o = u - 1, e = [];
   for (let n = 0; n < u * u; n++)
     if (n % u < o && Math.floor(n / u) < o) {
@@ -837,7 +851,7 @@ function he() {
     }
   return new Uint16Array(e);
 }
-function be({
+function ye({
   aspectRatio: o,
   fov: e,
   cameraHeight: n,
@@ -851,19 +865,19 @@ function be({
     shaders: [
       {
         name: "vertex",
-        type: ge,
-        source: ve
+        type: he,
+        source: me
       },
       {
         name: "fragment",
-        type: me,
-        source: de
+        type: ge,
+        source: ue
       }
     ],
     uniforms: [
       {
         name: "u_aspectRatio",
-        type: R,
+        type: E,
         value: o
       },
       {
@@ -878,59 +892,59 @@ function be({
       },
       {
         name: "u_t",
-        type: R,
+        type: E,
         value: 0
       },
       {
         name: "u_fov",
-        type: R,
+        type: E,
         value: e
       },
       {
         name: "u_cameraHeight",
-        type: R,
+        type: E,
         value: n
       },
       {
         name: "u_edgeColor",
-        type: E,
-        value: C(t)
+        type: R,
+        value: T(t)
       },
       {
         name: "u_faceColor",
-        type: E,
-        value: C(i)
+        type: R,
+        value: T(i)
       },
       {
         name: "u_birdColor",
-        type: E,
-        value: C(s)
+        type: R,
+        value: T(s)
       },
       {
         name: "u_shadowColor",
-        type: E,
-        value: C(r)
+        type: R,
+        value: T(r)
       }
     ],
     buffers: [
       {
         name: "faces",
         type: B,
-        mode: D,
+        mode: N,
         drawCount: 1,
-        values: he()
+        values: be()
       },
       {
         name: "edges",
         type: B,
-        mode: pe,
+        mode: xe,
         drawCount: 1,
-        values: xe()
+        values: we()
       },
       {
         name: "bird",
-        type: ue,
-        mode: D,
+        type: pe,
+        mode: N,
         drawCount: 2,
         // prettier-ignore
         values: new Float32Array([
@@ -957,27 +971,27 @@ function be({
     ]
   };
 }
-function we(o) {
+function _e(o) {
   return {
-    programs: [be(o)]
+    programs: [ye(o)]
   };
 }
-function ye(o, e) {
+function ze(o, e) {
   const n = e.getBoundingClientRect();
   return e.width = n.width * o.devicePixelRatio, e.height = n.height * o.devicePixelRatio, e.width / e.height;
 }
-function ze(o, e, n, t = !1) {
+function Ee(o, e, n, t = !1) {
   var l;
-  const i = ye(o, e);
+  const i = ze(o, e);
   let s;
   t && (s = new q(), (l = e.parentElement) == null || l.appendChild(s.dom));
   const r = e.getContext("webgl2");
   if (!r)
     throw new Error("unable to get webgl context");
-  new le({
+  new ve({
     window: o,
     webgl: r,
-    config: we({
+    config: _e({
       ...n,
       aspectRatio: i
     }),
@@ -986,5 +1000,5 @@ function ze(o, e, n, t = !1) {
   }).run();
 }
 export {
-  ze as renderVisuals
+  Ee as renderVisuals
 };
