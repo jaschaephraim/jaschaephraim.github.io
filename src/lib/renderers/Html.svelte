@@ -19,9 +19,9 @@
       'class',
       'absolute bottom-0 left-0 right-0 top-0 h-full w-full'
     );
-    text = `<div class="max-w-[640px]"><div class="paragraph-spacing relative w-full overflow-hidden pt-[${String(
+    text = `<div class="paragraph-spacing relative w-full overflow-hidden pt-[${String(
       paddingTop.toFixed(2)
-    )}%]">${iframe.toString()}</div></div>`;
+    )}%]">${iframe.toString()}</div>`;
   }
 </script>
 

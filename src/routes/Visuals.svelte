@@ -8,7 +8,7 @@
   let canvas: HTMLCanvasElement;
 
   onMount(async () => {
-    const { renderVisuals } = await import('$lib/visuals');
+    const { renderVisuals } = await import('visuals');
 
     renderVisuals(window, canvas, {
       fov: 2.0,

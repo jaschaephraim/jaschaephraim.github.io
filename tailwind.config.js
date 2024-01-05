@@ -18,5 +18,5 @@ export default {
     },
   },
   plugins: [],
-  safelist: ['paragraph-spacing', 'pt-[56.25%]', 'pt-[66.72%]'],
+  safelist: ['paragraph-spacing', 'pt-[25.00%]', 'pt-[56.25%]', 'pt-[66.72%]'],
 };

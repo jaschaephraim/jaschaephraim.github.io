@@ -8,6 +8,7 @@ Here is a recording of a Dharma talk I gave as part of the program, interpreting
 
 <iframe
   width="640"
+  height="160"
   scrolling="no"
   frameborder="no"
   allow="autoplay"
