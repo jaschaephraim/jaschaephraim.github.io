@@ -1,5 +1,5 @@
 {
-  "name": "ts-svelte-boilerplate",
+  "name": "jaschaephraim.com",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -7,7 +7,7 @@
   },
   "type": "module",
   "scripts": {
-    "clean": "rm -rf .svelte-kit node_modules",
+    "clean": "rm -rf .svelte-kit build node_modules",
     "prepare": "husky install",
     "format": "prettier --check ./src",
     "lint": "eslint .",
